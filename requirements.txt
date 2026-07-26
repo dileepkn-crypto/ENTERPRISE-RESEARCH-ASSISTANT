@@ -1,0 +1,12 @@
+streamlit
+pymupdf
+python-docx
+chromadb
+sentence-transformers
+langchain-text-splitters
+google-genai
+python-dotenv
+pandas
+plotly
+numpy
+pytest

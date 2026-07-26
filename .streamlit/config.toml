@@ -1,0 +1,18 @@
+[theme]
+
+base = "dark"
+
+primaryColor = "#8B5CF6"
+
+backgroundColor = "#050B16"
+
+secondaryBackgroundColor = "#0B1525"
+
+textColor = "#F8FAFC"
+
+font = "sans serif"
+
+[client]
+# The app provides its own grouped navigation in components/sidebar.py.
+# Hide Streamlit's automatic multipage menu so each destination appears once.
+showSidebarNavigation = false

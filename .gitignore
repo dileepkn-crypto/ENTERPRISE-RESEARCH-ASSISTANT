@@ -1,0 +1,42 @@
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Application-generated data
+data/chroma_db/*
+!data/chroma_db/.gitkeep
+data/documents/*
+!data/documents/.gitkeep
+data/researchiq.db
+
+# Logs / temporary files
+*.log
+logs/
+*.tmp
+*.temp

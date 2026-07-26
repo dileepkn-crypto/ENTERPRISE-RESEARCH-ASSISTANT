@@ -1,0 +1,763 @@
+/* =========================================================
+   RESEARCHIQ
+   ENTERPRISE DARK UI
+   ========================================================= */
+
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+:root {
+
+    --ri-bg: #050b16;
+    --ri-bg-soft: #08111f;
+
+    --ri-card: #0b1525;
+    --ri-card-hover: #0f1c30;
+
+    --ri-border: rgba(148, 163, 184, 0.14);
+    --ri-border-strong: rgba(139, 92, 246, 0.38);
+
+    --ri-text: #f8fafc;
+    --ri-text-soft: #cbd5e1;
+    --ri-muted: #94a3b8;
+    --ri-muted-dark: #64748b;
+
+    --ri-purple: #8b5cf6;
+    --ri-indigo: #6366f1;
+    --ri-blue: #60a5fa;
+    --ri-green: #34d399;
+}
+
+
+/* =========================================================
+   GLOBAL APPLICATION
+   ========================================================= */
+
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"] {
+
+    background:
+        radial-gradient(
+            circle at 82% 0%,
+            rgba(37, 99, 235, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 5%,
+            rgba(124, 58, 237, 0.06),
+            transparent 28%
+        ),
+        var(--ri-bg) !important;
+
+    color: var(--ri-text) !important;
+}
+
+
+/* =========================================================
+   STREAMLIT TOP HEADER
+   ========================================================= */
+
+[data-testid="stHeader"] {
+
+    background:
+        rgba(5, 11, 22, 0.92) !important;
+
+    backdrop-filter: blur(16px);
+
+    border-bottom:
+        1px solid
+        rgba(148, 163, 184, 0.06);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   IMPORTANT:
+   Extra spacing protects page title from Streamlit header.
+   ========================================================= */
+
+[data-testid="stMainBlockContainer"] {
+
+    padding-top: 6.5rem !important;
+
+    padding-bottom: 5rem !important;
+
+    padding-left:
+        clamp(2rem, 4vw, 4.5rem) !important;
+
+    padding-right:
+        clamp(2rem, 4vw, 4.5rem) !important;
+
+    max-width: 1550px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* Older Streamlit fallback */
+.main .block-container {
+
+    padding-top: 6.5rem !important;
+
+    max-width: 1550px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+[data-testid="stSidebar"] {
+
+    background:
+        linear-gradient(
+            180deg,
+            #07101f 0%,
+            #060c17 100%
+        ) !important;
+
+    border-right:
+        1px solid
+        var(--ri-border);
+}
+
+
+[data-testid="stSidebar"] * {
+
+    color: #dbe5f5;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.ri-page-header {
+
+    display: block;
+
+    width: 100%;
+
+    margin:
+        0 0 2.8rem 0 !important;
+
+    padding: 0 !important;
+
+    text-align: left !important;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.ri-page-eyebrow {
+
+    margin:
+        0 0 0.9rem 0 !important;
+
+    padding: 0 !important;
+
+    color: #a78bfa;
+
+    font-size: 0.77rem;
+
+    font-weight: 750;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    line-height: 1.4;
+
+    text-align: left !important;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.ri-page-title {
+
+    display: block;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    max-width: 1150px;
+
+    color: var(--ri-text) !important;
+
+    font-size:
+        clamp(
+            2.8rem,
+            4.6vw,
+            4.6rem
+        ) !important;
+
+    font-weight: 800 !important;
+
+    line-height: 1.06 !important;
+
+    letter-spacing:
+        -0.045em !important;
+
+    text-align: left !important;
+}
+
+
+/* =========================================================
+   TITLE GRADIENT
+   ========================================================= */
+
+.ri-page-highlight {
+
+    display: inline;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a855f7 0%,
+            #8b5cf6 30%,
+            #6366f1 60%,
+            #60a5fa 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    color: transparent;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.ri-page-description {
+
+    max-width: 900px;
+
+    margin:
+        1.25rem 0 0 0 !important;
+
+    padding: 0 !important;
+
+    color:
+        var(--ri-muted) !important;
+
+    font-size:
+        1.02rem !important;
+
+    font-weight: 400;
+
+    line-height:
+        1.75 !important;
+
+    text-align: left !important;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.ri-section-title {
+
+    margin:
+        2.8rem 0 0.4rem 0 !important;
+
+    padding: 0;
+
+    color:
+        var(--ri-text);
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.025em;
+}
+
+
+.ri-section-description {
+
+    margin:
+        0 0 1.4rem 0;
+
+    color:
+        var(--ri-muted-dark);
+
+    font-size: 0.94rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.ri-card {
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 1.4rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 27, 46, 0.96),
+            rgba(9, 18, 32, 0.96)
+        );
+
+    border:
+        1px solid
+        var(--ri-border);
+
+    border-radius: 15px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.ri-card:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        var(--ri-border-strong);
+
+    background:
+        var(--ri-card-hover);
+}
+
+
+.ri-card-label {
+
+    color: #93a9c8;
+
+    font-size: 0.79rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.04em;
+}
+
+
+.ri-card-value {
+
+    margin-top: 1rem;
+
+    color: #ffffff;
+
+    font-size: 1.75rem;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.ri-card-subtitle {
+
+    margin-top: 0.7rem;
+
+    color:
+        var(--ri-muted-dark);
+
+    font-size: 0.82rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   STREAMLIT METRICS
+   ========================================================= */
+
+[data-testid="stMetric"] {
+
+    min-height: 125px;
+
+    padding:
+        1.25rem !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d1829,
+            #091321
+        ) !important;
+
+    border:
+        1px solid
+        var(--ri-border) !important;
+
+    border-radius:
+        14px !important;
+}
+
+
+[data-testid="stMetricLabel"] {
+
+    color:
+        var(--ri-muted) !important;
+}
+
+
+[data-testid="stMetricValue"] {
+
+    color:
+        var(--ri-text) !important;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.stButton > button {
+
+    min-height: 2.7rem;
+
+    border:
+        1px solid
+        rgba(
+            139,
+            92,
+            246,
+            0.32
+        ) !important;
+
+    border-radius:
+        9px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d28d9,
+            #4f46e5
+        ) !important;
+
+    color:
+        #ffffff !important;
+
+    font-weight:
+        650 !important;
+
+    transition:
+        0.2s ease;
+}
+
+
+.stButton > button:hover {
+
+    border-color:
+        #8b5cf6 !important;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   TEXT INPUT
+   ========================================================= */
+
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stNumberInput"] input {
+
+    background:
+        #091423 !important;
+
+    color:
+        #f8fafc !important;
+
+    border:
+        1px solid
+        rgba(
+            148,
+            163,
+            184,
+            0.18
+        ) !important;
+
+    border-radius:
+        10px !important;
+}
+
+
+/* =========================================================
+   SELECTBOX
+   ========================================================= */
+
+[data-baseweb="select"] > div {
+
+    background:
+        #091423 !important;
+
+    color:
+        #f8fafc !important;
+
+    border-color:
+        rgba(
+            148,
+            163,
+            184,
+            0.18
+        ) !important;
+}
+
+
+/* =========================================================
+   FILE UPLOADER
+   ========================================================= */
+
+[data-testid="stFileUploaderDropzone"] {
+
+    background:
+        #091423 !important;
+
+    border:
+        1px dashed
+        rgba(
+            139,
+            92,
+            246,
+            0.42
+        ) !important;
+
+    border-radius:
+        12px !important;
+}
+
+
+/* =========================================================
+   EXPANDER
+   ========================================================= */
+
+[data-testid="stExpander"] {
+
+    background:
+        rgba(
+            13,
+            23,
+            40,
+            0.8
+        ) !important;
+
+    border:
+        1px solid
+        var(--ri-border) !important;
+
+    border-radius:
+        12px !important;
+}
+
+
+/* =========================================================
+   CHAT
+   ========================================================= */
+
+[data-testid="stChatMessage"] {
+
+    background:
+        rgba(
+            13,
+            23,
+            40,
+            0.65
+        );
+
+    border:
+        1px solid
+        rgba(
+            148,
+            163,
+            184,
+            0.09
+        );
+
+    border-radius:
+        14px;
+
+    padding:
+        0.75rem;
+}
+
+
+[data-testid="stChatInput"] {
+
+    background:
+        #081220 !important;
+}
+
+
+/* =========================================================
+   DATAFRAME
+   ========================================================= */
+
+[data-testid="stDataFrame"] {
+
+    border:
+        1px solid
+        var(--ri-border);
+
+    border-radius:
+        12px;
+
+    overflow:
+        hidden;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+hr {
+
+    border-color:
+        rgba(
+            148,
+            163,
+            184,
+            0.12
+        ) !important;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color:
+        var(--ri-text) !important;
+}
+
+
+p {
+
+    color:
+        var(--ri-text-soft);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (
+    max-width: 900px
+) {
+
+    [data-testid="stMainBlockContainer"] {
+
+        padding-top:
+            5.5rem !important;
+
+        padding-left:
+            1.5rem !important;
+
+        padding-right:
+            1.5rem !important;
+    }
+
+
+    .main .block-container {
+
+        padding-top:
+            5.5rem !important;
+    }
+
+
+    .ri-page-title {
+
+        font-size:
+            3rem !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+    max-width: 600px
+) {
+
+    [data-testid="stMainBlockContainer"] {
+
+        padding-top:
+            5rem !important;
+
+        padding-left:
+            1rem !important;
+
+        padding-right:
+            1rem !important;
+    }
+
+
+    .main .block-container {
+
+        padding-top:
+            5rem !important;
+    }
+
+
+    .ri-page-header {
+
+        margin-bottom:
+            2rem !important;
+    }
+
+
+    .ri-page-title {
+
+        font-size:
+            2.35rem !important;
+
+        line-height:
+            1.1 !important;
+    }
+
+
+    .ri-page-description {
+
+        font-size:
+            0.95rem !important;
+
+        line-height:
+            1.65 !important;
+    }
+
+}
